@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stream Dashboard</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        body {
+            background: #0a0a0a;
+            color: white;
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .panel {
+            background: #1b1b1b;
+            border: 1px solid #333;
+            padding: 18px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        input, button, select {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            margin-top: 6px;
+            width: 100%;
+        }
+
+        button {
+            cursor: pointer;
+            background: #2196f3;
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #0d8ae6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎥 Stream Dashboard</h1>
+
+    <!-- Connection Status -->
+    <div class="panel">
+        <h2>WebSocket</h2>
+        <p>Status: <span id="wsStatus">Connecting...</span></p>
+    </div>
+
+    <!-- Text Overlay -->
+    <div class="panel">
+        <h2>Text Overlay</h2>
+        <input id="overlayText" type="text" placeholder="Enter text…" />
+        <button onclick="sendText()">Show Text</button>
+        <button style="background:#e53935;" onclick="hideAll()">Hide All</button>
+    </div>
+
+    <!-- Image Overlay -->
+    <div class="panel">
+        <h2>Image Overlay</h2>
+        <input id="overlayImageURL" type="text" placeholder="Image URL…" />
+        <button onclick="sendImage()">Show Image</button>
+    </div>
+
+    <!-- Scene Panel -->
+    <div class="panel">
+        <h2>Scenes</h2>
+        <select id="sceneSelector">
+            <option value="sceneA">Scene A</option>
+            <option value="sceneB">Scene B</option>
+            <option value="sceneC">Scene C</option>
+        </select>
+
+        <button onclick="changeScene()">Switch Scene</button>
+    </div>
+
+    <script src="js/utils.js" type="module"></script>
+    <script src="js/dashboard.js" type="module"></script>
+</body>
+</html>

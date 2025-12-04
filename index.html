@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StreamApp Dashboard</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main class="container">
+<h1>StreamApp — Dashboard</h1>
+
+
+<section class="panel">
+<label>Backend WebSocket URL</label>
+<input id="ws-url" value="ws://localhost:8080" />
+<button id="connect">Connect</button>
+<span id="status">Disconnected</span>
+</section>
+
+
+<section class="panel">
+<h2>Send Test Alert</h2>
+<input id="alert-name" placeholder="Name (e.g. Maria)" />
+<select id="alert-type">
+<option value="follower">Follower</option>
+<option value="donation">Donation</option>
+<option value="cheer">Cheer</option>
+</select>
+<input id="alert-msg" placeholder="Message (optional)" />
+<button id="send-alert">Send Alert</button>
+</section>
+
+
+<section class="panel">
+<h2>Overlay Preview</h2>
+<p>Open <code>overlay.html</code> in a new window or add as Browser Source in OBS using your deployed GitHub Pages URL.</p>
+</section>
+</html>

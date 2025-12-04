@@ -1,0 +1,9 @@
+:root{--accent:#ff7a18;--bg:#0f1720;--card:#101826;--text:#e6eef6}
+body{font-family:system-ui,Segoe UI,Roboto,Arial;background:transparent;color:var(--text);margin:0}
+.container{max-width:900px;margin:20px auto;padding:12px}
+.panel{background:rgba(255,255,255,0.03);padding:12px;border-radius:8px;margin-bottom:12px}
+input,select,button{padding:8px;margin:6px 0;display:block;width:100%;box-sizing:border-box}
+.overlay{width:1920px;height:1080px;pointer-events:none}
+.alert-card{background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));padding:14px;border-radius:10px;margin:8px auto;max-width:480px;box-shadow:0 6px 18px rgba(0,0,0,0.6);pointer-events:auto}
+.alert-title{font-weight:700}
+.alert-message{opacity:0.9;font-size:0.95rem}
